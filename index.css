@@ -4,7 +4,7 @@ body{
 }
 
 .imgBox {
-    width: 720px;
+    width: 650px;
     margin: 50px auto 20px;
 }
 .imgBox img {
@@ -18,6 +18,8 @@ ul.thumb{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    transition: 0.5s;
     
 }
 ul.thumb li {
@@ -27,4 +29,17 @@ ul.thumb li {
 ul.thumb li img {
      border: 4px solid #fff;
     box-shadow: 0 5px 25px rgba(0,0,0,.5);
+}
+
+@media(max-width: 775px) {
+    .imgBox {
+    width: 320px;
+    margin: 50px auto 20px;
+}
+}
+@media(max-width: 335px) {
+    .imgBox {
+    width: 280px;
+    margin: 50px auto 20px;
+}
 }
