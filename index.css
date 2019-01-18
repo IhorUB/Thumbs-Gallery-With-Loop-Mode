@@ -1,18 +1,25 @@
-body{
+* {
+  box-sizing: border-box;
+}
+body {
     margin: 0;
     padding: 0;
 }
-
+h1{
+    text-align: center;
+}
 .imgBox {
     width: 650px;
     margin: 50px auto 20px;
 }
+
 .imgBox img {
     max-width: 100%;
     border: 4px solid #fff;
-    box-shadow: 0 5px 25px rgba(0,0,0,.5);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .5);
 }
-ul.thumb{
+
+ul.thumb {
     margin: 0 auto;
     padding: 0;
     display: flex;
@@ -20,26 +27,72 @@ ul.thumb{
     justify-content: center;
     flex-wrap: wrap;
     transition: 0.5s;
-    
+
 }
+
 ul.thumb li {
     list-style: none;
     margin: 0 10px;
 }
+
 ul.thumb li img {
-     border: 4px solid #fff;
-    box-shadow: 0 5px 25px rgba(0,0,0,.5);
+    border: 4px solid #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .5);
 }
 
 @media(max-width: 775px) {
     .imgBox {
-    width: 320px;
-    margin: 50px auto 20px;
+        width: 320px;
+        margin: 50px auto 20px;
+    }
 }
-}
+
 @media(max-width: 335px) {
     .imgBox {
-    width: 280px;
-    margin: 50px auto 20px;
+        width: 280px;
+        margin: 50px auto 20px;
+    }
 }
+
+
+
+/* Flex method*/
+
+.gallery {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.galley-column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.galley-column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+ .galley-column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+.galley-column{
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
 }

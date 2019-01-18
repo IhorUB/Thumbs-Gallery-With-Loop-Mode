@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>slide-gallery</title>
     <link rel="stylesheet" href="index.css" type="text/css" />
 </head>
+
 <body>
     <div class="imgBox"><img src="img/img1.jpg"></div>
     <ul class="thumb">
@@ -25,16 +27,60 @@
         <li><a href="img/img3.jpg" target="imgBox"><img src="img/img3.jpg" width="120px"></a></li>
         <li><a href="img/img4.jpg" target="imgBox"><img src="img/img4.jpg" width="120px"></a></li>
         <li><a href="img/img5.jpg" target="imgBox"><img src="img/img5.jpg" width="120px"></a></li>
-        
     </ul>
+
+
+<h1> FLEX method:</h1>
+    <!-- Photo Grid -->
+    <div class="gallery">
+        <div class="galley-column">
+            <img src="img/ind5.jpg" style="width:100%">
+            <img src="img/img2.jpg" style="width:100%">
+            <img src="img/img3.jpg" style="width:100%">
+            <img src="img/ind3.jpg" style="width:100%">
+            <img src="img/img5.jpg" style="width:100%">
+            <img src="img/ind7.jpg" style="width:100%">
+            <img src="img/img2.jpg" style="width:100%">
+        </div>
+        <div class="galley-column">
+            <img src="img/ind5.jpg" style="width:100%">
+            <img src="img/img3.jpg" style="width:100%">
+            <img src="img/ind3.jpg" style="width:100%">
+            <img src="img/img5.jpg" style="width:100%">
+            <img src="img/img1.jpg" style="width:100%">
+            <img src="img/ind7.jpg" style="width:100%">
+        </div>
+        <div class="galley-column">
+            <img src="img/img2.jpg" style="width:100%">
+            <img src="img/ind7.jpg" style="width:100%">
+            <img src="img/img3.jpg" style="width:100%">
+            <img src="img/img4.jpg" style="width:100%">
+            <img src="img/ind3.jpg" style="width:100%">
+            <img src="img/img1.jpg" style="width:100%">
+            <img src="img/ind5.jpg" style="width:100%">
+        </div>
+            <div class="galley-column">
+            <img src="img/img2.jpg" style="width:100%">
+            <img src="img/ind7.jpg" style="width:100%">
+            <img src="img/img3.jpg" style="width:100%">
+            <img src="img/img4.jpg" style="width:100%">
+            <img src="img/ind3.jpg" style="width:100%">
+            <img src="img/img1.jpg" style="width:100%">
+            <img src="img/ind5.jpg" style="width:100%">
+        </div>
+   
+    </div>
+
+
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('.thumb a').click(function(e){
-            e.preventDefault();
-            $('.imgBox img').attr("src", $(this).attr("href"));
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.thumb a').click(function(e) {
+                e.preventDefault();
+                $('.imgBox img').attr("src", $(this).attr("href"));
+            })
         })
-    })
-</script>
+    </script>
 </body>
+
 </html>
